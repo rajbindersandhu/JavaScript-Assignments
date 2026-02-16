@@ -21,7 +21,25 @@
   - `npm run test-compressString`
 */
 function compression(str) {
-  // Your code here
+  let resultStr = "";
+  let movingPtr= 0;
+  let countPtr = 0;
+  while(movingPtr <= str.length){
+    if(str[movingPtr] != str[countPtr]){
+      if(movingPtr - countPtr == 1){
+        resultStr += str[countPtr];
+      }
+      else{
+        let diff = movingPtr - countPtr;
+        resultStr += `${str[countPtr]}${diff}`;
+      }
+      countPtr = movingPtr;
+    }
+    movingPtr += 1;
+  }
+  return resultStr;
 }
+
+// console.log(compression("abc"))
 
 module.exports = compression;

@@ -23,8 +23,22 @@
 
 
 function compressWords(arr) {
-  // Your code here
+  let resultList = []
+  let movingPtr = 0;
+  let countPtr = 0
+  while(movingPtr <= arr.length){
+    if(arr[movingPtr] != arr[countPtr]){
+      if(movingPtr-countPtr == 1){
+        resultList.push(arr[countPtr])
+      }else{
+        resultList.push(`${arr[countPtr]}${movingPtr-countPtr}`)
+      }
+      countPtr = movingPtr
+    }
+    movingPtr += 1
+  }
+  return resultList;
 }
 
-
+// console.log(compressWords(["one", "two", "three"]))
 module.exports = compressWords;

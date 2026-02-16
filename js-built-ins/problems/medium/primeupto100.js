@@ -16,7 +16,22 @@
 */
 
 function getPrimesUpTo100() {
-  // Your code here
+  let resultList = [];
+  for(let i=2;i<=100;i++){
+    let flag = true;
+    for(let j=2;j<Math.floor(Math.sqrt(i)) + 1;j++){
+      if(i%j==0){
+        flag = false;
+        break;
+      }
+    }
+    if(flag){
+      resultList.push(i);
+    }
+  }
+  return resultList;
 }
+
+// console.log(getPrimesUpTo100());
 
 module.exports = { getPrimesUpTo100 };

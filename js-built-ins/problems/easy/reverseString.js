@@ -19,7 +19,11 @@
 */
 
 function reverseString(str) {
-  // Your code here
+  let revStr = ""
+  for(let i=0;i<str.length;i++){
+    revStr += str[(str.length - 1)-i]
+  }
+  return revStr
 }
-
+// console.log(reverseString("Sumana"))
 module.exports = reverseString;

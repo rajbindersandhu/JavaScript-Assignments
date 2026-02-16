@@ -20,8 +20,16 @@
 
 
 function findDuplicates(arr) {
-  return arr.filter((ele, index) => arr.indexOf(ele) !== index);
+  let resultArr = [];
+  for(let i=0;i<arr.length;i++){
+    let tempArr = [...arr.slice(0,i),...arr.slice(i+1)];
+    // console.log(tempArr)
+    if(tempArr.includes(arr[i]) && !(resultArr.includes(arr[i]))){
+      resultArr.push(arr[i]);
+    }
+  }
+  return resultArr;
 }
-
+// console.log(findDuplicates([1, 2, 3, 4, 5]))
 module.exports = findDuplicates;
 

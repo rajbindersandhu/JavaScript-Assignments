@@ -20,8 +20,17 @@
 
 
 function countOccurrences(arr) {
-  // Your code here
+  let countObjt = {};
+  for(let i=0;i<arr.length;i++){
+    if(arr[i] in countObjt){
+      countObjt[arr[i]] += 1;
+    }else{
+      countObjt[arr[i]] = 1;
+    }
+  }
+  return countObjt;
 }
+// console.log(countOccurrences([10, 20, 10, 30, 20, 20]))
 
 module.exports = countOccurrences;
 

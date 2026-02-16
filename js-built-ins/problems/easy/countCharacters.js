@@ -20,16 +20,15 @@
 */
 
 const countCharacters = (statement) => {
-  let result = {};
-  for (let i = 0; i < statement.length; i++) {
-    let char = statement.charAt(i);
-    if (result[char]) {
-      result[char]++;
-    } else {
-      result[char] = 1;
+  let wrdCountObjt = {};
+  for(let i=0;i<statement.length;i++){
+    if(statement[i] in wrdCountObjt){
+      wrdCountObjt[statement[i]] += 1;
+    }else{
+      wrdCountObjt[statement[i]] = 1;
     }
   }
-  return result;
+  return wrdCountObjt;
 };
 module.exports = countCharacters;
 

@@ -21,6 +21,13 @@
   - `npm run test-nonrepeat`
 */
 function nonrepeat(str) {
-  // Your code here
+  for(let i=0;i<str.length;i++){
+    let tempStr = str.slice(0,i) + str.slice(i+1);
+    if(!tempStr.includes(str[i])){
+      return str[i];
+    }
+  }
+  return null;
 }
+// console.log(nonrepeat("abccab"))
 module.exports = nonrepeat;
