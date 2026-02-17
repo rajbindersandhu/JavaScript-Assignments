@@ -7,18 +7,22 @@
   - `npm run test-anagram`
 */
 function isAnagram(str1, str2) {
-
-  if (str1.length !== str2.length) {
+  if(str1.length != str2.length){
+    return false;
+  }
+  let tempStr = str2.slice().toLowerCase();
+  for(let i=0;i<str1.length;i++){
+    if(!tempStr.includes(str1[i].toLowerCase())){
       return false;
+    }else{
+      let foundIndex = tempStr.indexOf(str1[i].toLowerCase());
+      tempStr = tempStr.slice(0,foundIndex) + tempStr.slice(foundIndex+1)
+    }
   }
-
-
-  function sortString(str) {
-      return str.toLowerCase().split('').sort().join('');
+  if(tempStr.length > 0){
+    return false;
   }
-
-
-  return sortString(str1) === sortString(str2);
+  return true;
 }
-
+// console.log(isAnagram("Debit Card", "Bad Credit"))
 module.exports = isAnagram;

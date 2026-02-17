@@ -12,6 +12,41 @@
 */
 
 class Todo {
+  constructor(){
+    this.todos =[];
+  }
+
+  add(todo){
+    this.todos.push(todo);
+  }
+
+  remove(indexOfTodo){
+    if(indexOfTodo<this.todos.length){
+      this.todos.splice(indexOfTodo, 1);
+    }
+  }
+
+  update(index, updateTodo){
+    if(index<this.todos.length){
+      this.todos.splice(index, 1, updateTodo);
+    }
+    
+  }
+
+  getAll(){
+    return this.todos;
+  }
+
+  get(index){
+    if(index<this.todos.length){
+      return this.todos[index];
+    }
+    return null;
+  }
+
+  clear(){
+    this.todos = []
+  }
 
 }
 

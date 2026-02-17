@@ -8,5 +8,17 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+    // let start = performance.now();
+    // console.log("Start time: ", start)
+    let sum=0;
+    for(let i=0;i<n;i++){
+        sum += i;
+    }
+    // let end = performance.now();
+    // console.log("End time: ", end)
+    // let diff = (end - start)/1000;
+    console.log("Time taken = ")
 }
+let start = performance.now();
+calculateTime(50);
+console.log(performance.now() - start);

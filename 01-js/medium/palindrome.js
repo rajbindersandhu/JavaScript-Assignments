@@ -7,7 +7,25 @@
 */
 
 function isPalindrome(str) {
-    return true;
-}
+  let start=0;
+  let end = str.length-1;
+  while(start < end){
+    if(!(/[a-z]/.test(str[start].toLowerCase()))){
+      start += 1
+      continue;
+    }
+    if(!(/[a-z]/.test(str[end].toLowerCase()))){
+      end -= 1;
+      continue;
+    }
 
+    if(str[start].toLowerCase() != str[end].toLowerCase()){
+      return false;
+    }
+    start+=1
+    end-=1
+  }
+  return true;
+}
+// console.log(isPalindrome("Nant"))
 module.exports = isPalindrome;
