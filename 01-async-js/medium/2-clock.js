@@ -6,3 +6,17 @@
 //  - HH:MM::SS (Eg. 13:45:23)
 
 //  - HH:MM::SS AM/PM (Eg 01:45:23 PM)
+
+
+function showTime(){
+    let dateObjt = new Date();
+    let hours = dateObjt.getHours();
+    let mins = dateObjt.getMinutes();
+    let sec = dateObjt.getSeconds();
+    let dayType = hours>=0 && hours<12 ? "AM": "PM"
+    let displayTime = `${hours}:${mins}:${sec} ${dayType}`;
+    process.stdout.write("\r");
+    process.stdout.write(displayTime);
+}
+showTime();
+setInterval(showTime, 1000);
