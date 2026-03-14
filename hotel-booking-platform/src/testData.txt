@@ -1,0 +1,42 @@
+User: {
+    "email": "raj.binder@test.com",
+    "password": "jmchu01"
+}
+JWT: eyJhbGciOiJIUzI1NiJ9.W29iamVjdCBPYmplY3Rd.OZhjg4HBuIRlaMRv2_R0ud4Zxp1UNCVdLRHBq7cNchI
+
+Hotel Sign Up Payload: {
+  "name": "Grand Palace Hotel",
+  "description": "Luxury 5-star hotel in the heart of the city",
+  "city": "Mumbai",
+  "country": "India",
+  "amenities": ["wifi", "pool", "gym", "parking", "restaurant"]
+}
+
+User Sign up payload: {
+  "name": "Priyam Sharma",
+  "email": "priyam@example.com",
+  "password": "priya123",
+  "role": "owner",
+  "phone": "+919876543210"
+}
+JWT Toekn : eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InByaXlhbUBleGFtcGxlLmNvbSIsInBhc3N3b3JkIjoicHJpeWExMjMifQ.EK1RtyLH9gw9u0P6mYTi-moEhuQGft2WCcGK-PVwP6E
+
+
+{
+  "name": "Raj binder",
+  "email": "raj.inder@example.com",
+  "password": "rajpass123",
+  "role": "customer",
+  "phone": "+919876543210"
+}
+JWT Token: eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJhai5pbmRlckBleGFtcGxlLmNvbSIsInBhc3N3b3JkIjoicmFqcGFzczEyMyJ9.Khr8KzqDO2i8nfOepFNqGQkXEJ2-Pb1b13frdJyYSzo
+
+
+{
+  "name": "Owner Singh",
+  "email": "owner@example.com",
+  "password": "owner123",
+  "role": "owner",
+  "phone": "+919876543210"
+}
+JWT Token: eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im93bmVyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiJvd25lcjEyMyJ9.LQ0qllHErv8FXhf6AbI-C7c89Cr0XgaeJXB1ay8IyCo

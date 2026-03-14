@@ -1,0 +1,21 @@
+export declare const insert_new_user_query: string;
+export declare const insert_new_hotel_query: string;
+export declare const insert_new_room_query: string;
+export declare const insert_booking_query: string;
+export declare const insert_review_query: string;
+export declare const get_user_by_email: string;
+export declare const get_room_by_roomNumber: string;
+export declare const get_hotel_by_id: string;
+export declare const get_all_rooms: string;
+export declare const get_room_by_id: string;
+export declare const get_booking_by_roomid: string;
+export declare const get_booking_btw_dates: string;
+export declare const get_user_using_hotelnrooms_join: string;
+export declare const get_bookingby_user_id: string;
+export declare const get_hotels_join_room: string;
+export declare const get_booking_by_id: string;
+export declare const get_review_by_id: string;
+export declare const get_reviews_by_bookId: string;
+export declare const update_booking_by_id: string;
+export declare const update_hotel_wit_rateNreview: string;
+//# sourceMappingURL=query.d.ts.map
